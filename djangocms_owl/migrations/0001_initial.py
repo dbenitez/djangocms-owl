@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='OwlCarousel',
             fields=[
-                ('cmsplugin_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin')),
+                ('cmsplugin_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin',on_delete=models.CASCADE)),
                 ('pagination', models.BooleanField(default=False, help_text='Show pagination. (dot dot dot)')),
                 ('pagination_numbers', models.BooleanField(default=False, help_text='Show numbers inside pagination buttons')),
                 ('navigation', models.BooleanField(default=False, help_text='Display "next" and "prev" buttons.')),
